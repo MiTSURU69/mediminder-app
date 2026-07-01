@@ -1,0 +1,80 @@
+{
+  "expo": {
+    "name": "MediMinder",
+    "slug": "mediminder",
+    "scheme": "mediminder",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon3.png",
+    "splash": {
+      "image": "./assets/splash2.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#2563EB"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourcompany.mediminder",
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "remote-notification",
+          "fetch"
+        ],
+        "LSApplicationQueriesSchemes": [
+          "whatsapp",
+          "whatsapp-beta"
+        ],
+        "NSMicrophoneUsageDescription": "Microphone access is required to record voice for chat input and speech-to-text.",
+        "NSSpeechRecognitionUsageDescription": "Speech recognition is used to convert your spoken words into text for the chat."
+      }
+    },
+    "android": {
+      "package": "com.yourcompany.mediminder",
+      "googleServicesFile": "./google-services.json",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "permissions": [
+        "INTERNET",
+        "VIBRATE",
+        "RECEIVE_BOOT_COMPLETED",
+        "WAKE_LOCK",
+        "SCHEDULE_EXACT_ALARM",
+        "RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-font",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#2563EB",
+          "sounds": [
+            "./assets/sounds/sound1.wav",
+            "./assets/sounds/sound2.wav"
+          ]
+        }
+      ],
+      "expo-router"
+    ],
+    "extra": {
+      "EXPO_PUBLIC_GEMINI_API_KEY": "AIzaSyAv9liLA28d1O5Z5OtY2AlNVL5Cg-Hzbsw",
+      "EXPO_GEMINI_MODEL": "models/gemini-2.0-flash",
+      "HF_API_KEY": "hhf_donkfbmqbOjvisHfHytSRShIYtHsPMSLLa",
+      "router": {},
+      "eas": {
+        "projectId": "gen-lang-client-0711607875"
+      }
+    }
+  }
+}
